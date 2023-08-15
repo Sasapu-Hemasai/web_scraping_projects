@@ -1,0 +1,84 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Apply styles to the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Apply styles to headings */
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Style for the upper table container */
+.upper-table-container {
+    height: 50%; /* Set the height to 50% of the viewport */
+    overflow: auto; /* Enable scrolling if content overflows the container */
+    border-bottom: 1px solid #ccc; /* Optional border for separation */
+}
+
+/* Style for the lower table container */
+.lower-table-container {
+    height: 50%; /* Set the height to 50% of the viewport */
+    overflow: auto; /* Enable scrolling if content overflows the container */
+}
+
+/* Style for the tables */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    /* Add other table styling as needed */
+}
+
+.data-table th, .data-table td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: black;
+    color: white;
+}
+
+/* Apply styles to ul and li */
+.mongodb-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.mongodb-list li {
+
+    margin-bottom: 5px;
+    color: black;
+}
+
+/* Apply styles to the table container */
+.table-container {
+    max-height: 800px; /* Set the desired max height for the table */
+    max-width: 1200px; /* Set the desired max width for the table */
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

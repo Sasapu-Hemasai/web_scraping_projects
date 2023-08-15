@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> <!-- Add this line for background image styling -->
+<title>YouTube Scraper</title>
+</head>
+<body>
+<div class="background-image"></div> <!-- Add this div for the background image -->
+<div class="container">
+    <form method="post" action="/search">
+        <div class="search-bar">
+           <input type="text" class="search-input" placeholder="Enter search term..." name="username">
+            <button class="submit">Search</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

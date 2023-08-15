@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultdesign.css') }}">
+    <style>
+        .table-container {
+            max-width: 1200px;
+            max-height: 300px; /* Set the desired max height for the table */
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- MySQL Data Table -->
+    <h2>Channel Data</h2>
+    <div class="upper-table-container table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>title</th>
+                    <th>video_id</th>
+                    <th>video_url</th>
+                    <th>likes</th>
+                    <th>no_of_comments</th>
+                    <th>thumbnail</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in sql_data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <h2>MongoDB Data Table</h2>
+    <div class="lower-table-container table-container">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Video ID</th>
+                    <th>Name</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doc in nosql_data %}
+                <tr>
+                    <td>{{ doc[0] }}</td>
+                    <td>{{ doc[1] }}</td>
+                    <td>{{ doc[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
